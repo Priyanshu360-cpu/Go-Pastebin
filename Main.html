@@ -1,0 +1,28 @@
+<h1>Main Page</h1>
+<style>
+    .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button1 {background-color: #4CAF50;}
+</style>
+<button onclick="random()" id = "random" class="button button1">
+New File
+  </button>
+  <script>
+      function random(){
+        var key = '';
+        const allowed ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        for (let i = 0; i < Math.floor(Math.random() * 10); i++) {
+			key = key+allowed.charAt(Math.floor(Math.random() * allowed.length));
+		}
+window.location = "/edit/"+key;
+      }
+  </script>
