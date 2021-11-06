@@ -1,5 +1,4 @@
 # Pastebin-
-A ready to use Pastebin written in Go Lang
 
 Specialities:-
 •Get Custom Links
