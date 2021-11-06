@@ -1,6 +1,6 @@
 # Pastebin-
 
-Specialities:-
+⭐ Specialities:-
 
 •Get Custom Links
 
@@ -8,7 +8,7 @@ Specialities:-
 
 •use get method to get data from the pastebin
 
-How to get started:-
+🌏 How to get started:-
 
 •Fork the Git
 
@@ -16,7 +16,7 @@ How to get started:-
 
 •go run main.go
 
-How to access?
+🔐 How to access?
 
 •/main to create paste
 
@@ -24,4 +24,4 @@ How to access?
 
 •/edit to edit files
 
-Don't forget to leave a star :)
+👏 Don't forget to leave a star :)
