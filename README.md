@@ -2,8 +2,7 @@
 A ready to use Pastebin written in Go Lang
 
 Specialities:-
-•Get Custom Links
-•Gets file secured
+•Get Custom Links\n•Gets file secured
 •use get method to get data from the pastebin
 
 How to get started:-
