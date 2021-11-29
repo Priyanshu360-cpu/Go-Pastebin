@@ -18,7 +18,7 @@
 
 🔐 How to access?
 
-    •/main to create paste
+    •/ to create paste
 
     •/view to view files
 
