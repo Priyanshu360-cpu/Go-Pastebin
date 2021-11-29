@@ -83,7 +83,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
 }
 
 var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
-var legalIndex = regexp.MustCompile("^/(main)$")
+var legalIndex = regexp.MustCompile("^/$")
 
 func makeHandler(fn func(http.ResponseWriter, *http.Request, string)) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
@@ -102,15 +102,15 @@ func IndexHandler(fn func(http.ResponseWriter, *http.Request, string)) http.Hand
 			http.NotFound(w, r)
 			return
 		}
-		fn(w, r, m[1])
+		fn(w, r, "main")
 	}
 }
 func main() {
 	http.HandleFunc("/view/", makeHandler(viewHandler))
 	http.HandleFunc("/edit/", makeHandler(editHandler))
 	http.HandleFunc("/save/", makeHandler(saveHandler))
-	http.HandleFunc("/main", IndexHandler(MainHandler))
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	http.HandleFunc("/", IndexHandler(MainHandler))
+	log.Fatal(http.ListenAndServe(":3000", nil))
 	router := gin.Default()
 	router.GET("/Fetch/:Id")
 }
